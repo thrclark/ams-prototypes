@@ -1,0 +1,354 @@
+@font-face {
+	font-family: 'BentonSansRegular';
+	src: url("https://fonts.iu.edu/fonts/benton-sans-regular.eot");
+	src: url("https://fonts.iu.edu/fonts/benton-sans-regular.eot?#iefix") format("embedded-opentype"), url("https://fonts.iu.edu/fonts/benton-sans-regular.woff") format("woff"), url("https://fonts.iu.edu/fonts/benton-sans-regular.ttf") format("truetype"), url("https://fonts.iu.edu/fonts/benton-sans-regular.svg#BentonSansRegular") format("svg");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'BentonSansCondRegular';
+	src: url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.eot");
+	src: url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.eot?#iefix") format("embedded-opentype"), url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.woff") format("woff"), url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.ttf") format("truetype"), url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.svg#BentonSansCondRegular") format("svg");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'BentonSansCondBold';
+	src: url("https://fonts.iu.edu/fonts/benton-sans-cond-bold.eot");
+	src: url("https://fonts.iu.edu/fonts/benton-sans-cond-bold.eot?#iefix") format("embedded-opentype"), url("https://fonts.iu.edu/fonts/benton-sans-cond-bold.woff") format("woff"), url("https://fonts.iu.edu/fonts/benton-sans-cond-bold.ttf") format("truetype"), url("https://fonts.iu.edu/fonts/benton-sans-cond-bold.svg#BentonSansCondBold") format("svg");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'GeorgiaProItalic';
+	src: url("https://fonts.iu.edu/fonts/georgia-pro-italic.eot");
+	src: url("https://fonts.iu.edu/fonts/georgia-pro-italic.eot?#iefix") format("embedded-opentype"), url("https://fonts.iu.edu/fonts/georgia-pro-italic.woff") format("woff"), url("https://fonts.iu.edu/fonts/georgia-pro-italic.ttf") format("truetype"), url("https://fonts.iu.edu/fonts/georgia-pro-italic.svg#GeorgiaProItalic") format("svg");
+	font-style: normal;
+	font-weight: normal;
+}
+/**************************************** Branding Bar ***************************************/
+/* Add a utitlity clearfix */
+.brand-clearfix:before, .brand-clearfix:after {
+	content: '';
+	display: table;
+}
+.brand-clearfix:after {
+	clear: both;
+}
+#branding-bar-v1 * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#branding-bar-v1 {
+	background: #7a1705;
+	color: #fff;
+	min-height: 46px;
+	font-size: 16px;
+	text-align: right;
+	position: relative;
+	z-index: 5;
+}
+/* Campus names */
+#branding-bar-v1 .show-on-mobile {
+	display: inline;
+}
+#branding-bar-v1 .show-on-tablet, #branding-bar-v1 .show-on-desktop {
+	display: none;
+}
+#branding-bar-v1 .wrapper {
+	max-width: 63.75em;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 2.35765%;
+	padding-left: 2.35765%;
+}
+#branding-bar-v1 .wrapper:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+#branding-bar-v1 a {
+	color: #fff;
+}
+#branding-bar-v1 ul {
+	list-style: none;
+}
+#branding-bar-v1 p {
+	margin-top: 0;
+}
+/*** Bar ***/
+#branding-bar-v1 .bar {
+	border-top: 6px solid #990000;
+}
+/*** Trident Tab & Campus Name ***/
+#branding-bar-v1 .campus {
+	font-family: "BentonSansCondRegular", "Arial Narrow", Arial, Helvetica, sans-serif;
+	font-size: 1em; /* 16px (16/16) */
+	font-weight: normal;
+	left: auto;
+	letter-spacing: 0.025em;
+	line-height: 1em; /* 16px (16/16) */
+	position: absolute;
+	text-align: left;
+	text-transform: uppercase;
+	top: 6px;
+	z-index: 400;
+	margin: 0;
+}
+#branding-bar-v1 .campus a {
+	font-family: inherit;
+	display: table-cell;
+	height: 40px;
+	padding: 0 0 0 45px;
+	text-decoration: none;
+	vertical-align: middle;
+}
+#branding-bar-v1 .campus a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+#branding-bar-v1 .campus img {
+	height: auto;
+	left: 0;
+	position: absolute;
+	top: -6px;
+	width: 34px;
+}
+#branding-bar-v1 .campus .expanded {
+	display: none;
+}
+
+/* 768px (768/16) */
+@media screen and (min-width: 48em) {
+#branding-bar-v1 {
+	min-height: 52px;
+}
+/* Campus names */
+#branding-bar-v1 .show-on-tablet {
+	display: inline;
+}
+#branding-bar-v1 .show-on-mobile, #branding-bar-v1 .show-on-desktop {
+	display: none;
+}
+/*** Trident Tab & Campus Name ***/
+#branding-bar-v1 .campus {
+	font-size: 1.125em; /* 18px (18/16) */
+	line-height: 1em; /* 18px (18/18) */
+}
+#branding-bar-v1 .campus a {
+	height: 46px;
+	padding: 0 0 0 75px;
+}
+#branding-bar-v1 .campus img {
+	left: 0;
+	width: 64px;
+}
+}
+
+/* 980px (980/16) - 960+20 for FF, IE, Opera d/t rounding */
+@media screen and (min-width: 63.75em) { /* Campus names */
+#branding-bar-v1 .show-on-desktop {
+	display: inline !important;
+}
+#branding-bar-v1 .show-on-tablet, #branding-bar-v1 .show-on-desktop {
+	display: none;
+}
+#branding-bar-v1 .wrapper {
+	padding: 0;
+}
+#branding-bar-v1 .campus abbr {
+	display: none;
+}
+#branding-bar-v1 .campus .expanded {
+	display: block;
+}
+}
+
+
+
+
+
+#branding-bar, footer {
+    -webkit-font-smoothing: initial;
+    -moz-font-smoothing: initial;
+    font-smoothing: initial;
+}
+#branding-bar *, footer * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#branding-bar .row, footer .row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    /*max-width: 64rem;*/
+    position: relative;
+}
+#branding-bar .row:before, #branding-bar .row:after, footer .row:before, footer .row:after {
+    content: " ";
+    display: table;
+}
+#branding-bar .row:after, footer .row:after {
+    clear: both;
+}
+#branding-bar .row.pad, footer .row.pad {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+}
+#branding-bar {
+    background-color: #7A1705;
+    border-top: 5px solid #990000;
+    /*position: fixed;*/
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+#branding-bar .show-on-mobile {
+    display: inline;
+}
+#branding-bar .show-on-tablet, #branding-bar .show-on-desktop {
+    display: none;
+}
+#branding-bar img {
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    width: 43px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+#branding-bar h1, #branding-bar #iu-campus {
+    font-family: BentonSansCondRegular, Arial, serif;
+    font-weight: normal;
+    color: #fff;
+    font-size: 18px;
+    float: left;
+    line-height: 45px;
+    margin: 0;
+    padding-left: 48px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    transition: all 0.25s;
+}
+#branding-bar h1 a, #branding-bar #iu-campus a {
+    color: #fff;
+    text-decoration: none;
+}
+#branding-bar h1 span, #branding-bar #iu-campus span {
+    font-family: inherit;
+}
+#branding-bar h1 .show-on-tablet, #branding-bar h1 .show-on-mobile, #branding-bar #iu-campus .show-on-tablet, #branding-bar #iu-campus .show-on-mobile {
+    font-size: 17px;
+}
+footer {
+    padding: 24px 0;
+    text-align: center;
+    position: relative;
+    font-family: BentonSansRegular, Arial, serif;
+    font-weight: normal;
+}
+footer a {
+    color: #990000;
+}
+footer img {
+    display: block;
+    width: 24px;
+    margin: 0 auto 10px;
+}
+footer p {
+    font-size: 75%;
+    line-height: 24px;
+    margin: 0;
+    clear: left;
+}
+footer .tagline {
+    font-family: BentonSansCondBold, Arial, serif;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    background: #7A1705;
+    color: #fff;
+    font-size: 1.375rem;
+    line-height: 2.5rem;
+    margin: -24px -0.9375rem 24px -0.9375rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+footer .tagline span {
+    text-transform: lowercase;
+    font-family: GeorgiaProBoldItalic, Georgia, serif;
+    font-size: 1rem;
+    vertical-align: 2px;
+    letter-spacing: 0;
+    margin-left: -4px;
+}
+footer {
+    text-align: left;
+    border-top: 6px solid #7A1705;
+    margin-top: 35px;
+    padding-top: 0px;
+    background: #ffffff;
+}
+footer .tagline {
+    font-family: BentonSansCondBold, "Arial Narrow", Arial, serif;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    background: #7A1705;
+    color: #fff;
+    font-size: 23px;
+    line-height: 36px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-left: -14px;
+    margin-right: -14px;
+}
+footer p {
+    text-align: center
+}
+
+@media (min-width: 767px) {
+    footer .tagline {
+        font-size: 23px;
+        position: absolute;
+        left: 50%;
+        margin: 0 -200px 0 0;
+        top: -50px;
+        padding: 0 24px;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    footer {
+        padding-top: 30px;
+    }
+    footer .copyright {
+        float: left;
+        padding-left: 39px;
+    }
+    footer .privacy {
+        float: right;
+        text-align: right;
+    }
+    footer img {
+        display: inline;
+        margin: 0;
+        position: absolute;
+        left: 0.9375rem;
+        top: 12px;
+        width: 24px;
+    }
+    footer p {
+        line-height: 55px;
+        clear: none;
+    }
+}
+
+
