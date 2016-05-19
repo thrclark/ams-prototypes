@@ -45,7 +45,6 @@
                 <div class="form-horizontal" style="padding-bottom:0px">
                     <div class="form-group" style="margin-bottom:0px;">
                         <div class="col-sm-4 control-label lead" style="padding-top:0px; font-weight:normal">Please select</div>
-                    
                         <div class="col-sm-8">
                             <div class="customradio">
                                 <div class="customradio-primary">
@@ -75,7 +74,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                       <div class="col-sm-4 control-label" style="padding-top:0px; font-weight:bold">Creating your Passphrase</div>
+                        <div class="col-sm-4 control-label" style="padding-top:0px; font-weight:bold">Creating your Passphrase</div>
                         <div class="col-sm-8"> A passphrase is a sentence or series of words, numbers, or symbols used along with your Network ID to log into your IU account. </div>
                     </div>
                     <div class="form-group">
@@ -128,7 +127,7 @@
             <div class="col-md-12">
                 <form class="form-horizontal">
                     <div class="form-group">
-                            <div class="col-sm-4 control-label" style="padding-top:0px; font-weight:bold">Identify Yourself</div>
+                        <div class="col-sm-4 control-label" style="padding-top:0px; font-weight:bold">Identify Yourself</div>
                         <div class="col-sm-8">
                             <p> In order to reset your passphrase, we need to verify your identity. Enter your last name, birth date, and 10 digit <a href="https://kb.iu.edu/d/amuh">University ID number</a>. </p>
                         </div>

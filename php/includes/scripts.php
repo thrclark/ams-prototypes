@@ -7,6 +7,3 @@
 <script type="text/javascript" src="../plugins/bootstrap-tabcollapse.js"></script>
 <script type="text/javascript" src="../plugins/jquery.sticky.js"></script>
 <script type="text/javascript" src="../plugins/validator.min.js"></script>
-
-
-

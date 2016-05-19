@@ -1,16 +1,8 @@
-
-
 <script>
   $(document).ready(function(){
     $("#brand-header").sticky({topSpacing:0});
   });
 </script>
-
-
-
-
-
-
 <script type='text/javascript'>//<![CDATA[
 $(window).load(function(){
 $(window).scroll(function() {     

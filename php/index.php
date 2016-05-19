@@ -28,10 +28,7 @@ header .app-header h1 {
                 <li><a href="passphrase-reset.php" target="_blank">Reset Passphrase</a> </li>
                 <li><a href="useragreement-home.php" target="_blank">User Agreement</a> </li>
                 <li><a href="affiliate-home.php" target="_blank">Affiliate Accounts</a> </li>
-                
-                   <li><a href="starterkit-home.php" target="_blank">Starter Kit</a> </li>
-                   
-                   
+                <li><a href="starterkit-home.php" target="_blank">Starter Kit</a> </li>
             </ul>
         </div>
     </div>

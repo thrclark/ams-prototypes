@@ -330,10 +330,6 @@
             <a href="useragreement-home.php" class="btn btn-default">Back</a> </div>
     </div>
 </div>
-
-
-
-
 <?php include ('includes/footer-scripts.php') ?>
 <?php include ('includes/brand-footer.php') ?>
 </body>

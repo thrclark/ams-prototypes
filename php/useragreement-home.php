@@ -15,12 +15,10 @@
         <nav class="navbar navbar-default" style="margin-bottom:0px">
             <div class="row">
                 <div class="col-md-6 col-xs-12">
-                   
                     <ol class="breadcrumb">
                         <li class=""><a href="https://one.iu.edu/collection/iu/access-management" title="Home Page"><i class="visible-xs-inline-block icon-left-open-1"></i>Access.IU</a></li>
                         <li class="hidden-xs">Acceptable Use Agreement</li>
                     </ol>
-                    
                 </div>
                 <div class="col-md-6 hidden-xs hidden-sm">
                     <ul class="nav navbar-nav navbar-right">
@@ -50,10 +48,6 @@
         <div class="text-center" style="margin-top:40px"> <a class="btn btn-lg btn-default" href="useragreement-viewprint.php" style="border:solid 2px #44697D; color:#44697D; font-weight: bold; margin:5px">View and Print Agreement</a><a class="btn btn-lg btn-default" href="useragreement-complete.php" style=" border:solid 2px #44697D; color:#44697D; font-weight: bold; margin:5px">Complete Agreement Again</a> </div>
     </div>
 </div>
-
-
-
-
 <?php include ('includes/footer-scripts.php') ?>
 <?php include ('includes/brand-footer.php') ?>
 </body>
