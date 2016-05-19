@@ -1,11 +1,28 @@
-# Build and Release Folders
-bin/
-bin-debug/
-bin-release/
+npm_modules
+bower_components
+node_modules
+trash
+Error.log
+.DS_Store
+.sass-cache
+.tmp
+.rvmrc
+.trashes
+*~
 
-# Other files and folders
-.settings/
+# Optional things
+*.sublime-project
+*.sublime-workspace
+sftp-config.json
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+.idea/.name
+
+*.xml
+
+*.iml
+
+*.xml
+
+*.xml
+
+*.xml
