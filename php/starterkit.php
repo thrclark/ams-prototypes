@@ -581,6 +581,9 @@ $(document).ready(function() {
 
     
 </script> 
+
+<!--Wizard--> 
+
 <script>
 $(document).ready(function () {
 

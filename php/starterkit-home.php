@@ -29,12 +29,6 @@
                             <li><a href="#">Help Item 3</a> </li>
                         </ul>
                     </li>
-                    <!--  <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User: thrclark </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Sign out</a> </li>
-                            
-                        </ul>
-                    </li>-->
                 </ul>
             </div>
         </div>
@@ -88,7 +82,7 @@
                                         <input class="form-control"  id="univID" name="univID" type="text" placeholder="10 digits" >
                                     </div>
                                 </div>
-                                <div class="col-md-12 text-right"> <a href="starterkit.php" class="btn btn-primary nextBtn" >Next</a> </div>
+                                <div class="col-md-12 text-right"> <a href="#" class="btn btn-primary nextBtn" >Next</a> </div>
                             </div>
                         </div>
                     </form>
@@ -98,7 +92,19 @@
     </div>
 </div>
 <?php include ('includes/brand-footer.php') ?>
+<?php include ('modal/validation.php') ?>
 <?php include ('includes/footer-scripts.php') ?>
+<script>
+    $(document).ready(function() {
+        $('.nextBtn').click(function() {
+            if (!$('#univID').val()) {
+                $('#validation').modal();
+            } else {
+                window.location.replace("starterkit.php");
+            }
+        });
+    });
+</script> 
 <script type="text/javascript">
 
   function checkForm(form)
