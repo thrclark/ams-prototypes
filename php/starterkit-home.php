@@ -92,13 +92,14 @@
     </div>
 </div>
 <?php include ('includes/brand-footer.php') ?>
-<?php include ('modal/validation.php') ?>
+<?php include ('modal/validation-univid.php') ?>
 <?php include ('includes/footer-scripts.php') ?>
 <script>
     $(document).ready(function() {
         $('.nextBtn').click(function() {
             if (!$('#univID').val()) {
-                $('#validation').modal();
+			//if ($('#univID').val() == ('1')) {
+                $('#validation-univid').modal();
             } else {
                 window.location.replace("starterkit.php");
             }

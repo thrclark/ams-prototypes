@@ -63,36 +63,6 @@
                         </div>
                     </div>
                     <form class="form-horizontal" data-toggle="validator">
-                        <div class="row setup-content" id="step-1">
-                            <div class="col-md-12">
-                                <h4 class="stepwizard-title"> Identify Yourself</h4>
-                                <div class="form-group">
-                                    <label for="lastname" class="col-sm-2 control-label">Last Name</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="lastname" value="">
-                                    </div>
-                                </div>
-                                <div class="form-group" id="lastname-message" style="display:none">
-                                    <div class="col-sm-2"></div>
-                                    <div class="col-sm-8"> Last name must not contain a space or a quote </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="birthdate" class="col-sm-2 control-label">Birthdate</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="birthdate" placeholder="mm/dd/yyyy">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="univID" class="col-sm-2 control-label">University ID</label>
-                                    <div class="col-sm-8">
-                                        <input class="form-control"  id="univID" name="univID" type="text" placeholder="10 digits" >
-                                    </div>
-                                </div>
-                                <div class="col-md-12 text-right"> <a href="#" class="btn btn-default goback disabled">Back</a>
-                                    <button class="btn btn-primary nextBtn" type="button" >Next</button>
-                                </div>
-                            </div>
-                        </div>
                         <div class="row setup-content" id="step-2">
                             <input class=""   type="hidden"  >
                             <div class="col-md-12">
@@ -286,12 +256,12 @@
                                 <label for="agreetoterms" class="col-sm-12" style="font-weight:normal">Type "yes" if you agree to the terms of the Guidelines for Appropriate Usage statements.</label>
                                 <div class="row">
                                     <div class="col-xs-4 col-md-2">
-                                        <input class="form-control"  id="agreetoterms" name="agreetoterms" type="text"  >
+                                        <input class="form-control"  id="agreetoterms" name="agreetoterms" type="text"   required="required">
                                     </div>
                                     <div class="col-xs-8 col-md-10"> </div>
                                 </div>
-                                <div class="col-md-12 text-right"><a onclick="location.href = 'starterkit-home.php';" href="starterkit-home.php" class="btn btn-default goback">Back</a>
-                                    <button class="btn btn-primary nextBtn" type="button" >Next</button>
+                                <div class="col-md-12 text-right">
+                                    <button class="btn btn-primary nextBtn" type="button" id="next1">Next</button>
                                 </div>
                             </div>
                         </div>
@@ -329,7 +299,7 @@
                                         thoclark </label>
                                 </div>
                             </div>
-                            <div class="col-md-12 text-right"><a href="#step-2" class="btn btn-default goback">Back</a>
+                            <div class="col-md-12 text-right">
                                 <button class="btn btn-primary nextBtn" type="button" >Next</button>
                             </div>
                         </div>
@@ -343,7 +313,7 @@
                             <div class="col-md-10">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="domainoptions" id="domainoptions1" value="domainoptions1">
+                                        <input type="radio" name="domainoptions" id="domainoptions1" value="domainoptions1" checked>
                                         thrclark@indiana.edu </label>
                                 </div>
                                 <div class="radio">
@@ -352,7 +322,7 @@
                                         thrclark@iu.edu </label>
                                 </div>
                             </div>
-                            <div class="col-md-12 text-right"><a href="#step-3" class="btn btn-default goback">Back</a>
+                            <div class="col-md-12 text-right">
                                 <button class="btn btn-primary nextBtn" type="button" >Next</button>
                             </div>
                         </div>
@@ -363,29 +333,33 @@
                                 <p>A passphrase is a sentence or series of words, numbers, or symbols used along with your Network ID to log into your IU account. </p>
                             </div>
                             <div class="form-group">
-                                <label for="NewPassphrase" class="col-sm-2 control-label">Passphrase</label>
+                                <label for="password1" class="col-sm-2 control-label">Passphrase</label>
                                 <div class="col-sm-8">
-                                    <input type="password" data-minlength="6" class="form-control" id="NewPassphrase" placeholder="Password">
+                                    <input type="password" class="form-control" name="password1" id="password1" placeholder="New Password" autocomplete="off">
                                 </div>
                             </div>
                             <div class="form-group passreq" id="passreq" style="display:none">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-8">
-                                    <div class="row">
-                                        <div class="col-sm-12"> <span id="pass-length" class="glyphicon glyphicon-ok alert-neutral" aria-hidden="true"></span> Use 15 to 127 characters (at least 4 of which are unique) <br>
-                                            <span id="pass-minwords" class="glyphicon glyphicon-ok alert-neutral" aria-hidden="true"></span> Use 4 or more non-repeating words (at least two characters in each) <br>
-                                            <span id="pass-symbols" class="sr-only"  aria-hidden="true"> <span class="glyphicon glyphicon-remove alert-danger"></span> Don't use any of the following  characters: &gt; &lt; " #  @ </span> <span id="pass-name"  class="sr-only" aria-hidden="true"> <span class="glyphicon glyphicon-remove alert-danger"></span> Don't use your name or username </span> </div>
-                                    </div>
+                                    <div><span id="15char" class="glyphicon glyphicon-ok" style="color:#cccccc;"></span> Must have 15-127 characters (including spaces)</div>
+                                    <div><span id="ucase" class="glyphicon glyphicon-ok" style="color:#cccccc;"></span> One Uppercase Letter</div>
+                                    <div><span id="lcase" class="glyphicon glyphicon-ok" style="color:#cccccc;"></span> One Lowercase Letter</div>
+                                    <div><span id="num" class="glyphicon glyphicon-ok" style="color:#cccccc;"></span> One Non-Letter</div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputPasswordConfirm" class="col-sm-2 control-label">Confirm</label>
+                                <label for="password2" class="col-sm-2 control-label">Confirm</label>
                                 <div class="col-sm-8">
-                                    <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#NewPassphrase" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
-                                    <div class="help-block with-errors"></div>
+                                    <input type="password" class="form-control" name="password2" id="password2" placeholder="Repeat Password" autocomplete="off">
                                 </div>
                             </div>
-                            <div class="col-md-12 text-right"><a href="#step-4" class="btn btn-default goback">Back</a>
+                            <div class="form-group passsame" id="passsame" style="display:none">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">
+                                    <div> <span id="pwmatch" class="glyphicon glyphicon-ok" style="color:#cccccc;"></span> Passwords Match</div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-right">
                                 <button class="btn btn-primary nextBtn" type="button" >Next</button>
                             </div>
                         </div>
@@ -505,7 +479,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12 text-right"> <a href="#step-5" class="btn btn-default goback">Back</a>
+                            <div class="col-md-12 text-right">
                                 <button class="btn btn-primary nextBtn" type="button" >Next</button>
                             </div>
                         </div>
@@ -515,8 +489,8 @@
                                 <p> You have entered the following information. Please review these items before submitting your account request.</p>
                                 <p style="font-weight:bold"> Your Account Information:</p>
                                 <ul>
-                                    <li> Your IU username is: thrclark<a href=""> <em><small>(edit)</small></em></a> </li>
-                                    <li> Your IU email is: thrclark@iu.edu <a href=""> <em><small>(edit)</small></em></a></li>
+                                    <li> Your IU username is: thrclark<!--<a href=""> <em><small>(edit)</small></em></a> --></li>
+                                    <li> Your IU email is: thrclark@iu.edu <!--<a href=""> <em><small>(edit)</small></em></a>--></li>
                                 </ul>
                                 <p style="font-weight:bold"> Your registered passphrase questions are:</p>
                                 <ul>
@@ -524,10 +498,10 @@
                                     <li> In what city were you born?</li>
                                     <li> What is your father's middle name?</li>
                                     <li> What is the name of your first grade teacher?</li>
-                                    <li style="list-style:none"><a href=""> <em><small>(edit questions)</small></em></a> </li>
+                                    <li style="list-style:none"><!--<a href=""> <em><small>(edit questions)</small></em></a>--> </li>
                                 </ul>
                             </div>
-                            <div class="col-md-12 text-right"><a href="#step-6" class="btn btn-default goback">Back</a> <a href="starterkit-confirmation.php" class="btn btn-primary nextBtn" >Submit</a> </div>
+                            <div class="col-md-12 text-right"><a href="starterkit-confirmation.php" class="btn btn-primary nextBtn" >Submit</a> </div>
                         </div>
                     </form>
                 </div>
@@ -536,38 +510,47 @@
     </div>
 </div>
 <?php include ('includes/brand-footer.php') ?>
+<?php include ('modal/validation-agreement.php') ?>
 <?php include ('includes/footer-scripts.php') ?>
 <script>
-$(document).ready(function() {
-    var max_fields      = 8; //maximum input boxes allowed
-    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
-    var add_button      = $(".add_field_button"); //Add button ID
-    
-    var x = 1; //initlal text box count
-    $(add_button).click(function(e){ //on add input button click
-        e.preventDefault();
-        if(x < max_fields){ //max input box allowed
-            x++; //text box increment
-            $(wrapper).append('<div class="added_field"> <hr> <div class="form-group"> <label for="" class="col-sm-2 col-xs-6 control-label">Question <span class="label-sub">(optional)</span></label><div class="col-xs-6 text-right visible-xs"> <a href="" class="btn btn-xs btn-link remove_field">Delete</a></div><div class="col-sm-8"> <select  class="form-control"> <option value="" selected>select</option> <option value="">Which phone number do you remember most from your childhood?</option> <option value="">What was your favorite place to visit as a child?</option> <option value="">Who is your favorite actor, musician, or artist?</option> <option value="">What is the name of your favorite pet?</option> <option value="">In what city were you born?</option> <option value="">What high school did you attend?</option> <option value="">What is the name of your first school?</option> <option value="">What is your favorite movie?</option> <option value="">What is your mothers maiden name?</option> <option value="">What street did you grow up on?</option> <option value="">What was the make of your first car?</option> <option value="">When is your anniversary?</option> <option value="">What is your favorite color?</option> <option value="">What is your fathers middle name?</option> <option value="">What is the name of your first grade teacher?</option> <option value="">What was your high school mascot?</option> <option value="">Which is your favorite web browser?</option> </select> </div> <div class="col-sm-2 hidden-xs"> <a href="" class="btn btn-sm btn-link remove_field">Delete</a></div> </div> <div class="form-group"> <label for="" class="col-sm-2 control-label">Answer</label> <div class="col-sm-8"> <input type="text" class="form-control" value=""> </div> </div></div>'); //add input box
-        }
+    $(document).ready(function() {
+        var max_fields = 8; //maximum input boxes allowed
+        var wrapper = $(".input_fields_wrap"); //Fields wrapper
+        var add_button = $(".add_field_button"); //Add button ID
+
+        var x = 1; //initlal text box count
+        $(add_button).click(function(e) { //on add input button click
+            e.preventDefault();
+            if (x < max_fields) { //max input box allowed
+                x++; //text box increment
+                $(wrapper).append('<div class="added_field"> <hr> <div class="form-group"> <label for="" class="col-sm-2 col-xs-6 control-label">Question <span class="label-sub">(optional)</span></label><div class="col-xs-6 text-right visible-xs"> <a href="" class="btn btn-xs btn-link remove_field">Delete</a></div><div class="col-sm-8"> <select  class="form-control"> <option value="" selected>select</option> <option value="">Which phone number do you remember most from your childhood?</option> <option value="">What was your favorite place to visit as a child?</option> <option value="">Who is your favorite actor, musician, or artist?</option> <option value="">What is the name of your favorite pet?</option> <option value="">In what city were you born?</option> <option value="">What high school did you attend?</option> <option value="">What is the name of your first school?</option> <option value="">What is your favorite movie?</option> <option value="">What is your mothers maiden name?</option> <option value="">What street did you grow up on?</option> <option value="">What was the make of your first car?</option> <option value="">When is your anniversary?</option> <option value="">What is your favorite color?</option> <option value="">What is your fathers middle name?</option> <option value="">What is the name of your first grade teacher?</option> <option value="">What was your high school mascot?</option> <option value="">Which is your favorite web browser?</option> </select> </div> <div class="col-sm-2 hidden-xs"> <a href="" class="btn btn-sm btn-link remove_field">Delete</a></div> </div> <div class="form-group"> <label for="" class="col-sm-2 control-label">Answer</label> <div class="col-sm-8"> <input type="text" class="form-control" value=""> </div> </div></div>'); //add input box
+            }
+        });
+
+        $(wrapper).on("click", ".remove_field", function(e) { //user click on remove text
+            e.preventDefault();
+            $(this).closest('.added_field').remove();
+            x--;
+        })
     });
-    
-    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
-        e.preventDefault(); $(this).closest('.added_field').remove(); x--;
-    })
-});
 </script> 
 <script>
     $(document).ready(function() {
-        $("#NewPassphrase").focusin(function() {
+        $("#password1").focusin(function() {
             $("#passreq").slideDown();
         }).focusout(function() {
             $("#passreq").slideUp();
         });
     });
-
-
-    
+</script> 
+<script>
+    $(document).ready(function() {
+        $("#password2").focusin(function() {
+            $("#passsame").slideDown();
+        }).focusout(function() {
+            $("#passsame").slideUp();
+        });
+    });
 </script> 
 <script>
     $(document).ready(function() {
@@ -577,149 +560,188 @@ $(document).ready(function() {
             $("#lastname-message").slideUp();
         });
     });
+</script> 
+<script>
+    $(document).ready(function() {
 
+        $("#password1").keyup(function() {
+            var ucase = new RegExp("[A-Z]+");
+            var lcase = new RegExp("[a-z]+");
+            var num = new RegExp("[^a-zA-Z\d\s:]+");
+			
+            if ($("#password1").val().length >= 15) {
+                $("#15char").css("color", "#00A41E");
+            } else {
+                $("#15char").css("color", "#cccccc");
+            }
+            if (ucase.test($("#password1").val())) {
+                $("#ucase").css("color", "#00A41E");
+            } else {
+                $("#ucase").css("color", "#cccccc");
+            }
+            if (lcase.test($("#password1").val())) {
+                $("#lcase").css("color", "#00A41E");
+            } else {
+                $("#lcase").css("color", "#cccccc");
+            }
+            if (num.test($("#password1").val())) {
+                $("#num").css("color", "#00A41E");
+            } else {
+                $("#num").css("color", "#cccccc");
+            }
+        });
+    });
+</script> 
+<script>
+    $(document).ready(function() {
 
-    
+        $("#password2, #password1").keyup(function() {
+            if ($("#password1").val() == $("#password2").val()) {
+
+                $("#pwmatch").css("color", "#00A41E");
+            } else {
+
+                $("#pwmatch").css("color", "#cccccc");
+            }
+        });
+    });
 </script> 
 
 <!--Wizard--> 
 
 <script>
-$(document).ready(function () {
+    $(document).ready(function() {
 
-    var navListItems = $('div.setup-panel div a, .goback'),
+        var navListItems = $('div.setup-panel div a, .goback'),
             allWells = $('.setup-content'),
             allNextBtn = $('.nextBtn');
 
-    allWells.hide();
+        allWells.hide();
 
-    navListItems.click(function (e) {
-        e.preventDefault();
-        var $target = $($(this).attr('href')),
+        navListItems.click(function(e) {
+            e.preventDefault();
+            var $target = $($(this).attr('href')),
                 $item = $(this);
 
-        if (!$item.hasClass('disabled')) {
-            navListItems.removeClass('btn-primary').addClass('btn-default');
-            $item.addClass('btn-primary');
-            allWells.hide();
-            $target.show();
-            $target.find('input:eq(0)').focus();
-        }
+            if (!$item.hasClass('disabled')) {
+                navListItems.removeClass('btn-primary').addClass('btn-default');
+                $item.addClass('btn-primary');
+                allWells.hide();
+                $target.show();
+                $target.find('input:eq(0)').focus();
+            }
+        });
+
+        allNextBtn.click(function() {
+            var curStep = $(this).closest(".setup-content"),
+                curStepBtn = curStep.attr("id"),
+                nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+                curInputs = curStep.find("input[type='text'],input[type='url']"),
+                isValid = true;
+
+            $(".form-group").removeClass("has-error");
+            for (var i = 0; i < curInputs.length; i++) {
+                if (!curInputs[i].validity.valid) {
+                    isValid = false;
+                    $(curInputs[i]).closest(".form-group").addClass("has-error");
+                    $('#validation-agreement').modal();
+                }
+            }
+
+            if (isValid)
+                nextStepWizard.removeClass('disabled').trigger('click');
+        });
+
+        $('div.setup-panel div a.btn-primary').trigger('click');
     });
+</script> 
+<script type='text/javascript'>
+    //<![CDATA[
+    $(document).ready(function() {
+        var targetDate = new Date();
+        targetDate.setDate(targetDate.getDate() + 365);
 
-    allNextBtn.click(function(){
-        var curStep = $(this).closest(".setup-content"),
-            curStepBtn = curStep.attr("id"),
-            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-            curInputs = curStep.find("input[type='text'],input[type='url']"),
-            isValid = true;
 
-        $(".form-group").removeClass("has-error");
-        for(var i=0; i<curInputs.length; i++){
-            if (!curInputs[i].validity.valid){
-                isValid = false;
-                $(curInputs[i]).closest(".form-group").addClass("has-error");
+        function addZero(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+
+
+        // So you can see the date we have created
+        //alert(targetDate);
+        var minutes = addZero(targetDate.getMinutes());
+        var hour = targetDate.getHours();
+        var dd = targetDate.getDate();
+        var mm = targetDate.getMonth() + 1; // 0 is January, so we must add 1
+        var yyyy = targetDate.getFullYear();
+
+        var dateString = mm + "/" + dd + "/" + yyyy + " at " + hour + ":" + minutes;
+
+        // So you can see the output
+        //alert(dateString);
+        $("#datetimepicker7").val(dateString);
+        //document.getElementById('setstartdate').value = Date();
+
+        var startdate = new Date();
+        var minutes = addZero(startdate.getMinutes());
+        var hour = startdate.getHours();
+        var d = startdate.getDate();
+        var m = startdate.getMonth();
+        m += 1; // JavaScript months are 0-11
+        var y = startdate.getFullYear();
+
+        $("#setstartdate").val("1/6/2016 at 10:23");
+
+        $("#setnow").click(function() {
+            $("#datetimepicker7").val(m + "/" + d + "/" + y + " at " + hour + ":" + minutes);
+        })
+    }); //]]>
+</script> 
+<script type='text/javascript'>
+    //<![CDATA[
+    $(function() {
+        function checkWidth() {
+            if ($(window).width() > 992) {
+                $('#tab1-collapse').addClass('');
+            } else {
+                $('#tab1-collapse').removeClass('in');
             }
         }
+        $(window).resize(checkWidth);
 
-        if (isValid)
-            nextStepWizard.removeClass('disabled').trigger('click');
-    });
-
-    $('div.setup-panel div a.btn-primary').trigger('click');
-});</script> 
-<script type='text/javascript'>//<![CDATA[
-$(document).ready(function() {
-var targetDate = new Date();
-targetDate.setDate(targetDate.getDate() + 365);
-
-
-function addZero(i) {
-    if (i < 10) {
-        i = "0" + i;
-    }
-    return i;
-}
-
-
-
-// So you can see the date we have created
-//alert(targetDate);
-var minutes = addZero(targetDate.getMinutes());
-var hour = targetDate.getHours();
-var dd = targetDate.getDate();
-var mm = targetDate.getMonth() + 1; // 0 is January, so we must add 1
-var yyyy = targetDate.getFullYear();
-
-var dateString = mm + "/" + dd + "/" + yyyy + " at " + hour + ":" + minutes;
-
-// So you can see the output
-//alert(dateString);
-$("#datetimepicker7").val(dateString);
- //document.getElementById('setstartdate').value = Date();
- 
-var startdate = new Date();
-var minutes = addZero(startdate.getMinutes());
-var hour = startdate.getHours();
-var d = startdate.getDate();
-var m =  startdate.getMonth();
-m += 1;  // JavaScript months are 0-11
-var y = startdate.getFullYear();
-
-$("#setstartdate").val("1/6/2016 at 10:23");
-
-$("#setnow").click(function() {
-        $("#datetimepicker7").val(m + "/" + d + "/" + y + " at " + hour + ":" + minutes);
-    })	
-
-
-});//]]> 
-
-</script> 
-<script type='text/javascript'>//<![CDATA[
-$(function(){
-function checkWidth() {
-    if ($(window).width() > 992) {
-        $('#tab1-collapse').addClass('');
-    } else {
-        $('#tab1-collapse').removeClass('in');
-    }
-}
-
-$(window).resize(checkWidth);
-
-});//]]> 
-
+    }); //]]>
 </script> 
 <script>
     $(document).ready(function() {
 
         $('.nav-tabs-responsive').tabCollapse();
-		$('.nav-tabs-responsive').on('shown-tabs.bs.tabcollapse', function(){
-    		$('.nav-tabs-responsive a:first').tab('show')
-});
-
+        $('.nav-tabs-responsive').on('shown-tabs.bs.tabcollapse', function() {
+            $('.nav-tabs-responsive a:first').tab('show')
+        });
     });
-	
 </script> 
 <script type="text/javascript">
-    $(function () {
-		$('#birthdate').datetimepicker({
-			viewMode: 'decades',
-			format: 'MM/DD/YYYY',
-			defaultDate: "1/1/1990"
-			});
+    $(function() {
+        $('#birthdate').datetimepicker({
+            viewMode: 'decades',
+            format: 'MM/DD/YYYY',
+            defaultDate: "1/1/1990"
+        });
         $('#datetimepicker6').datetimepicker({
-			format: 'MM/DD/YYYY'
-			});
+            format: 'MM/DD/YYYY'
+        });
         $('#datetimepicker7').datetimepicker({
-			format: 'MM/DD/YYYY',
+            format: 'MM/DD/YYYY',
             useCurrent: false //Important! See issue #1075
         });
-        $("#datetimepicker6").on("dp.change", function (e) {
+        $("#datetimepicker6").on("dp.change", function(e) {
             $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
         });
-        $("#datetimepicker7").on("dp.change", function (e) {
+        $("#datetimepicker7").on("dp.change", function(e) {
             $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
         });
     });
