@@ -335,7 +335,7 @@
                             <div class="form-group">
                                 <label for="password1" class="col-sm-2 control-label">Passphrase</label>
                                 <div class="col-sm-8">
-                                    <input type="password" class="form-control" name="password1" id="password1" placeholder="New Password" autocomplete="off">
+                                    <input type="password" class="form-control" name="password1" id="password1" autocomplete="off">
                                 </div>
                             </div>
                             <div class="form-group passreq" id="passreq" style="display:none">
@@ -350,7 +350,7 @@
                             <div class="form-group">
                                 <label for="password2" class="col-sm-2 control-label">Confirm</label>
                                 <div class="col-sm-8">
-                                    <input type="password" class="form-control" name="password2" id="password2" placeholder="Repeat Password" autocomplete="off">
+                                    <input type="password" class="form-control" name="password2" id="password2" autocomplete="off">
                                 </div>
                             </div>
                             <div class="form-group passsame" id="passsame" style="display:none">
