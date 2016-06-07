@@ -37,7 +37,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="well">
-                    <div class="stepwizard">
+                    <div class="stepwizard hidden-print">
                         <div class="stepwizard-row setup-panel">
                             <div class="stepwizard-step"> <a href="#" onclick="location.href='starterkit-home.php';"  class="btn btn-default btn-circle"><i class="icon-user-3"></i></a>
                                 <p class="hidden-xs label-sub">Your ID</p>
@@ -57,8 +57,8 @@
                             <div class="stepwizard-step"> <a href="#step-6" class="btn btn-default btn-circle disabled" ><i class="icon-question"></i></a>
                                 <p class="hidden-xs label-sub">Recovery</p>
                             </div>
-                            <div class="stepwizard-step"> <a href="#step-7" class="btn btn-default btn-circle disabled" ><i class="icon-eye"></i></a>
-                                <p class="hidden-xs label-sub">Review &amp; Submit</p>
+                            <div class="stepwizard-step"> <a href="#step-7" class="btn btn-default btn-circle disabled" ><i class="icon-star-2"></i></a>
+                                <p class="hidden-xs label-sub">Finished</p>
                             </div>
                         </div>
                     </div>
@@ -484,9 +484,11 @@
                             </div>
                         </div>
                         <div class="row setup-content" id="step-7">
-                            <div class="col-md-12">
-                                <h4 class="stepwizard-title">Review &amp; Submit</h4>
-                                <p> You have entered the following information. Please review these items before submitting your account request.</p>
+                            <div class="col-md-12 printable">
+                                <h4 class="stepwizard-title">All finished!</h4>
+                                <p> Carefully read and print or write down the account information below. Use the Print button at the bottom of the page to print this page. If you are unable to access any of your accounts after 24 hours, contact your campus <a href="https://kb.iu.edu/d/abxl" target="_blank">Support Center</a> or <a href="mailto:ithelp@iu.edu">Help Desk</a>. </p>
+                                
+                                <p>Once activated, you can access your Microsoft Exchange email by logging on to <a href="https://www.exchange.iu.edu/" target="_blank">www.exchange.iu.edu</a>.</p>
                                 <p style="font-weight:bold"> Your Account Information:</p>
                                 <ul>
                                     <li> Your IU username is: thrclark<!--<a href=""> <em><small>(edit)</small></em></a> --></li>
@@ -501,7 +503,7 @@
                                     <li style="list-style:none"><!--<a href=""> <em><small>(edit questions)</small></em></a>--> </li>
                                 </ul>
                             </div>
-                            <div class="col-md-12 text-right"><a href="starterkit-confirmation.php" class="btn btn-primary nextBtn" >Submit</a> </div>
+                            <div class="col-md-12 text-right"><button class="btn btn-primary" onclick="printpage()">Print</button> </div>
                         </div>
                     </form>
                 </div>
@@ -745,6 +747,11 @@
             $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
         });
     });
+</script>
+<script>
+    function printpage() {
+        window.print();
+    }
 </script>
 </body>
 </html>

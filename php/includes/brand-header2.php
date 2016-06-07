@@ -1,6 +1,6 @@
 
 <section id="branding-bar-v1" itemscope="itemscope" itemtype="http://schema.org/CollegeOrUniversity">
-    <div class="bar">
+    <div class="bar hidden-print">
         <div class="container">
             <h1 class="campus"> <a href="http://www.iu.edu/"> <img src="../img/trident-tab.gif" height="73" width="64" alt=" " /> <span itemprop="name sourceOrganization provider">Indiana University</span> </a> </h1>
         </div>
