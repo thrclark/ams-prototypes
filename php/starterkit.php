@@ -8,8 +8,8 @@
 <?php include ('includes/scripts.php') ?>
 </head>
 <body id="top" >
-<?php include ('includes/brand-header2.php') ?>
 <header >
+    <?php include ('includes/brand-header2.php') ?>
     <nav class="navbar navbar-inverse" id="brand-header" >
         <div class="container">
             <div class="navbar-header">
@@ -17,7 +17,7 @@
                 <a class="navbar-brand" href="https://one.iu.edu/collection/iu/access-management">Access Management</a> </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Help</a>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Help</a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Help Item 1</a> </li>
                             <li><a href="#">Help Item 2</a> </li>
@@ -39,25 +39,25 @@
                 <div class="well">
                     <div class="stepwizard hidden-print">
                         <div class="stepwizard-row setup-panel">
-                            <div class="stepwizard-step"> <a href="#" onclick="location.href='starterkit-home.php';"  class="btn btn-default btn-circle"><i class="icon-user-3"></i></a>
+                            <div class="stepwizard-step"> <a href="#" onclick="location.href='starterkit-home.php';"  class="btn btn-default btn-circle" aria-label="Your ID"><i class="icon-user-3"></i></a>
                                 <p class="hidden-xs label-sub">Your ID</p>
                             </div>
-                            <div class="stepwizard-step"> <a href="#step-2" class="btn btn-default btn-circle btn-primary"><i class="icon-check-1"></i></a>
+                            <div class="stepwizard-step"> <a href="#step-2" class="btn btn-default btn-circle btn-primary" aria-label="Agreement"><i class="icon-check-1"></i></a>
                                 <p class="hidden-xs label-sub">Agreement</p>
                             </div>
-                            <div class="stepwizard-step"> <a href="#step-3" class="btn btn-default btn-circle disabled" ><i class="icon-pencil-3"></i></a>
+                            <div class="stepwizard-step"> <a href="#step-3" class="btn btn-default btn-circle disabled" aria-label="Username"><i class="icon-pencil-3"></i></a>
                                 <p class="hidden-xs label-sub">Username</p>
                             </div>
-                            <div class="stepwizard-step"> <a href="#step-4" class="btn btn-default btn-circle disabled" ><i class="icon-mail-3"></i></a>
+                            <div class="stepwizard-step"> <a href="#step-4" class="btn btn-default btn-circle disabled" aria-label="Email"><i class="icon-mail-3"></i></a>
                                 <p class="hidden-xs label-sub">Email</p>
                             </div>
-                            <div class="stepwizard-step"> <a href="#step-5" class="btn btn-default btn-circle disabled" ><i class="icon-shield"></i></a>
+                            <div class="stepwizard-step"> <a href="#step-5" class="btn btn-default btn-circle disabled" aria-label="Passphrase"><i class="icon-shield"></i></a>
                                 <p class="hidden-xs label-sub">Passphrase</p>
                             </div>
-                            <div class="stepwizard-step"> <a href="#step-6" class="btn btn-default btn-circle disabled" ><i class="icon-question"></i></a>
+                            <div class="stepwizard-step"> <a href="#step-6" class="btn btn-default btn-circle disabled" aria-label="Recovery"><i class="icon-question"></i></a>
                                 <p class="hidden-xs label-sub">Recovery</p>
                             </div>
-                            <div class="stepwizard-step"> <a href="#step-7" class="btn btn-default btn-circle disabled" ><i class="icon-star-2"></i></a>
+                            <div class="stepwizard-step"> <a href="#step-7" class="btn btn-default btn-circle disabled" aria-label="Finished"><i class="icon-star-2"></i></a>
                                 <p class="hidden-xs label-sub">Finished</p>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                         <div class="row setup-content" id="step-2">
                             <input class=""   type="hidden"  >
                             <div class="col-md-12">
-                                <h4 class="stepwizard-title">Appropriate Usage Agreement</h4>
+                                <h3 class="h4 stepwizard-title">Appropriate Usage Agreement</h3>
                                 <p>To be entrusted with computer accounts, users of the Indiana University computing networks must accept certain responsibilities and standards for computer use. These responsibilities apply to all IU computing resources. The Privileges and Responsibilities may change with time; by accepting the terms now, you agree to abide by these rules in all of your IU computing activities. Read the statement below. If you agree to the Guidelines for Appropriate Usage type 'Yes' and click Continue. Otherwise, you may exit now.</p>
                                 <div id="content" class="user-agreement">
                                     <h4> Usage Responsibilities</h4>
@@ -119,7 +119,7 @@
                                         <li>Ensure, in the rare cases where it is necessary to email Critical data, that the
                                             data are sent to the correct recipient and only via encrypted email methods.</li>
                                     </ul>
-                                    <h5>Legal Usage</h5>
+                                    <h5> Legal Usage</h5>
                                     <p> You agree to:</p>
                                     <ul>
                                         <li>Use information and IT for legal purposes only. </li>
@@ -165,7 +165,7 @@
                                             or Critical data, without a contract processed through or waived by the IU Purchasing
                                             Department.</li>
                                     </ul>
-                                    <h5>Facilitative Usage</h5>
+                                    <h5> Facilitative Usage</h5>
                                     <p> You agree to:</p>
                                     <ul>
                                         <li>Never cause community or shared resources to be inaccessible or unusable.</li>
@@ -268,7 +268,7 @@
                         <div class="row setup-content" id="step-3">
                             <input class=""   type="hidden"  >
                             <div class="col-md-12">
-                                <h4 class="stepwizard-title">Select a Username</h4>
+                                <h3 class="h4 stepwizard-title">Select a Username</h3>
                                 <p>Please choose one of the following options for your IU username. This username will be used as your identification on most IU systems. It will also be used as the basis of your email address.</p>
                             </div>
                             <div class="col-md-2"></div>
@@ -306,7 +306,7 @@
                         <div class="row setup-content" id="step-4">
                             <input class=""   type="hidden"  >
                             <div class="col-md-12">
-                                <h4 class="stepwizard-title">Select Email Domain</h4>
+                                <h3 class="h4 stepwizard-title">Select Email Domain</h3>
                                 <p>As an IU student, you are provided an email address by your campus. This address is used by most academic and administrative offices to send you messages.</p>
                             </div>
                             <div class="col-md-2"></div>
@@ -329,7 +329,7 @@
                         <div class="row setup-content" id="step-5">
                             <input class=""   type="hidden"  >
                             <div class="col-md-12">
-                                <h4 class="stepwizard-title">Create Passphrase</h4>
+                                <h3 class="h4 stepwizard-title">Create Passphrase</h3>
                                 <p>A passphrase is a sentence or series of words, numbers, or symbols used along with your Network ID to log into your IU account. </p>
                             </div>
                             <div class="form-group">
@@ -366,7 +366,7 @@
                         <div class="row setup-content" id="step-6">
                             <input class=""   type="hidden"  >
                             <div class="col-md-12">
-                                <h4 class="stepwizard-title">Passphrase Recovery Questions</h4>
+                                <h3 class="h4 stepwizard-title">Passphrase Recovery Questions</h3>
                                 <p> If you forget your passphrase and attempt to reset it, you will be asked to answer three registered questions chosen at random. Please consider:</p>
                                 <ul>
                                     <li>You must register at least three questions.</li>
@@ -485,9 +485,8 @@
                         </div>
                         <div class="row setup-content" id="step-7">
                             <div class="col-md-12 printable">
-                                <h4 class="stepwizard-title">All finished!</h4>
+                                <h3 class="h4 stepwizard-title">All finished!</h3>
                                 <p> Carefully read and print or write down the account information below. Use the Print button at the bottom of the page to print this page. If you are unable to access any of your accounts after 24 hours, contact your campus <a href="https://kb.iu.edu/d/abxl" target="_blank">Support Center</a> or <a href="mailto:ithelp@iu.edu">Help Desk</a>. </p>
-                                
                                 <p>Once activated, you can access your Microsoft Exchange email by logging on to <a href="https://www.exchange.iu.edu/" target="_blank">www.exchange.iu.edu</a>.</p>
                                 <p style="font-weight:bold"> Your Account Information:</p>
                                 <ul>
@@ -503,7 +502,9 @@
                                     <li style="list-style:none"><!--<a href=""> <em><small>(edit questions)</small></em></a>--> </li>
                                 </ul>
                             </div>
-                            <div class="col-md-12 text-right"><button class="btn btn-primary" onclick="printpage()">Print</button> </div>
+                            <div class="col-md-12 text-right">
+                                <button class="btn btn-primary" onclick="printpage()">Print</button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -747,7 +748,7 @@
             $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
         });
     });
-</script>
+</script> 
 <script>
     function printpage() {
         window.print();

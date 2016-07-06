@@ -13,8 +13,10 @@
 </style>
 </head>
 <body id="top" >
-<?php include ('includes/brand-header2.php') ?>
+
 <header >
+
+<?php include ('includes/brand-header2.php') ?>
     <nav class="navbar navbar-inverse" id="brand-header" >
         <div class="container">
             <div class="navbar-header">
@@ -22,7 +24,7 @@
                 <a class="navbar-brand" href="https://one.iu.edu/collection/iu/access-management">Access Management</a> </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Help</a>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Help</a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Help Item 1</a> </li>
                             <li><a href="#">Help Item 2</a> </li>
@@ -44,7 +46,7 @@
                 <div class="well">
                     <div class="stepwizard">
                         <div class="stepwizard-row setup-panel">
-                            <div class="stepwizard-step"> <a href="#step-1" class="btn btn-primary btn-circle"><i class="icon-user-3"></i></a>
+                            <div class="stepwizard-step"> <a href="#step-1" class="btn btn-primary btn-circle"><i class="icon-user-3"></i><span class="sr-only">Your ID</span></a>
                                 <p class="hidden-xs label-sub">Your ID</p>
                             </div>
                             <div class="stepwizard-step"> </div>
@@ -58,7 +60,7 @@
                     <form class="form-horizontal">
                         <div class="row setup-content" id="step-1">
                             <div class="col-md-12">
-                                <h4 class="stepwizard-title"> Identify Yourself</h4>
+                                <h3 class="h4 stepwizard-title"> Identify Yourself</h3>
                                 <p> Begin the process of creating your IU computing account by entering your information.</p>
                                 <div class="form-group">
                                     <label for="LastName" class="col-sm-2 control-label">Last Name</label>
